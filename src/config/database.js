@@ -6,7 +6,7 @@ const connectDB = async () => {
     console.log('conectado ao MongoDB com sucesso!');
   } catch (error) {
     console.error('erro ao conectar ao MongoDB:', error.message);
-    process.exit(1);
+    process.exit(1); // Encerra o processo — sem banco, a API não deve subir
   }
 };
 

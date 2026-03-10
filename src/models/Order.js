@@ -12,7 +12,7 @@ const orderSchema = new Schema({
   creationDate: { type: Date, required: true },
   items: [itemSchema]
 }, {
-  versionKey: false
+  versionKey: false // Remove o campo __v que o Mongoose adiciona por padrão
 });
 
 export default model('Order', orderSchema);

@@ -1,3 +1,4 @@
+// Converte os campos do payload (pt-BR) para o schema do banco (en)
 export const mapOrderToDatabase = (requestBody) => {
   return {
     orderId: requestBody.numeroPedido,
