@@ -11,3 +11,12 @@ export const createOrderService = async (bodyData) => {
 };
 
 export const getOrderService = async (orderId) => await Order.findOne({ orderId });
+
+export const listOrdersService = async () => await Order.find();
+
+export const updateOrderService = async (orderId, bodyData) => {
+  const updateData = mapOrderToDatabase(bodyData);
+  return await Order.findOneAndUpdate({ orderId }, updateData, { new: true });
+};
+
+export const deleteOrderService = async (orderId) => await Order.findOneAndDelete({ orderId });
