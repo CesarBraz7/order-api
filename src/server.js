@@ -2,7 +2,7 @@ import 'dotenv/config';
 import express, { json } from 'express';
 import cors from 'cors';
 import connectDB from './config/database.js';
-import orderRoutes from './src/routes/orderRoutes.js';
+import orderRoutes from './routes/orderRoute.js';
 
 const app = express();
 app.use(cors());
